@@ -25,7 +25,7 @@ Base path: `C:/Users/nimro/.gemini/antigravity/scratch`
 - `patch-asar.ps1` (3.0 KB)
 - `README.md` (5.0 KB)
 - `watcher.ps1` (2.2 KB)
-- `widget-code.js` (18.3 KB)
+- `widget-code.js` (23.3 KB)
 
 ---
 

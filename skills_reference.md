@@ -9,6 +9,7 @@ Total: 14 skills across 7 plugins.
 ## Contents
 
 - [superpowers](#superpowers) (14 skills)
+- [Custom Workspace Skills](#custom-workspace-skills-cusersnimrogeminiantigravityskills) (13 skills)
 
 ---
 
@@ -30,6 +31,28 @@ Total: 14 skills across 7 plugins.
 | `verification-before-completion` | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always |
 | `writing-plans` | Use when you have a spec or requirements for a multi-step task, before touching code |
 | `writing-skills` | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
+
+---
+
+## Custom Workspace Skills (C:\Users\nimro\.gemini\antigravity\skills\)
+
+These are the specialized business, design, and automation skills installed locally on Nimrod's Antigravity system.
+
+| Skill | Description / When to use |
+|---|---|
+| `conversation-rules` | Strict interaction guidelines: short, direct, business-focused, execution-first responses. |
+| `design-taste-frontend` | Principles for building high-agency, custom frontend UI (calibrated color, responsive layout, motion). |
+| `expo-tailwind-setup` | Setup guide for Tailwind CSS v4 in Expo using react-native-css and NativeWind v5. |
+| `frontend-dev-guidelines` | Architectural & performance guidelines for senior React/TypeScript development. |
+| `google-calendar-automation` | Standing OAuth integration guidelines for Google Calendar (bypasses MCP). |
+| `google-sheets-automation` | Standing OAuth integration guidelines for Google Sheets (bypasses MCP). |
+| `klaviyo-automation` | Campaign and flow automation guidelines via Composio/Rube MCP. |
+| `llm-prompt-optimizer` | Guidelines to engineer LLM prompts to improve accuracy and reduce token usage. |
+| `marketing-ideas` | Prioritized database of 140 growth ideas for SaaS/software with scoring rules. |
+| `marketing-psychology` | Applying behavioral science and mental models to marketing choices. |
+| `minimalist-ui` | Design rules for warm-monochrome, crisp borders, and flat bento layouts. |
+| `shopify-lead-outreach` | Automated store research, email fetching, and Sheets/CSV database syncing. |
+| `ui-patcher` | Guide to unpack, modify, and repack the Antigravity application wrapper (`app.asar`) for UI widgets. |
 
 ---
 
