@@ -2,22 +2,13 @@
 
 All skills installed across all plugins.
 
-Total: 15 skills across 7 plugins.
+Total: 14 skills across 7 plugins.
 
 ---
 
 ## Contents
 
-- [android-cli-plugin](#android-cli-plugin) (1 skills)
 - [superpowers](#superpowers) (14 skills)
-
----
-
-## android-cli-plugin — 1 skill
-
-| Skill | When to use |
-|---|---|
-| `references` | *(no description found)* |
 
 ---
 

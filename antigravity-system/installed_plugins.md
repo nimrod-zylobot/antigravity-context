@@ -10,9 +10,7 @@ Plugin path: `C:/Users/nimro/.gemini/config/plugins`
 
 **Path:** `C:/Users/nimro/.gemini/config/plugins/android-cli-plugin`
 
-| Skill | Description |
-|---|---|
-| `references` | *(no description found)* |
+*(No skills defined)*
 
 ---
 
