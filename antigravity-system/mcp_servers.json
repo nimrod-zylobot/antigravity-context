@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "StitchMCP": {
+      "args": [
+        "C:\\Users\\nimro\\AppData\\Roaming\\npm\\node_modules\\mcp-remote\\dist\\proxy.js",
+        "https://stitch.googleapis.com/mcp",
+        "--header",
+        "X-Goog-Api-Key: [REDACTED]"
+      ],
+      "command": "node"
+    },
+    "composio": {
+      "headers": {
+        "x-consumer-api-key": "ck_zTzksBtzgIEE4RXl-sBx"
+      },
+      "serverUrl": "https://connect.composio.dev/mcp"
+    },
+    "github": {
+      "args": [
+        "C:\\Users\\nimro\\AppData\\Roaming\\npm\\node_modules\\@modelcontextprotocol\\server-github\\dist\\index.js"
+      ],
+      "command": "node",
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "[REDACTED]"
+      }
+    },
+    "google-workspace": {
+      "args": [
+        "C:\\Users\\nimro\\AppData\\Roaming\\npm\\node_modules\\@aaronsb\\google-workspace-mcp\\build\\index.js"
+      ],
+      "command": "node",
+      "env": {
+        "GOOGLE_CLIENT_ID": "[REDACTED]",
+        "GOOGLE_CLIENT_SECRET": "[REDACTED]",
+        "PATH": "[REDACTED]",
+        "SystemRoot": "[REDACTED]"
+      }
+    },
+    "notion-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "OPENAPI_MCP_HEADERS": "[REDACTED]"
+      }
+    },
+    "agentmemory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@agentmemory/mcp"
+      ],
+      "env": {
+        "AGENTMEMORY_URL": "[REDACTED]"
+      }
+    }
+  }
+}

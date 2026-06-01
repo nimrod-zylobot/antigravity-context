@@ -1,0 +1,7 @@
+- **android-cli-plugin**
+- **chrome-devtools-plugin**
+- **firebase**
+- **google-antigravity-sdk**
+- **google-workspace-guide**
+- **modern-web-guidance-plugin**
+- **superpowers**
