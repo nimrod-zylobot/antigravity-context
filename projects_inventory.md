@@ -1,28 +1,24 @@
 # Projects Inventory
 
-All active project directories on Nimrod's PC.
-
 Base path: `C:/Users/nimro/.gemini/antigravity/scratch`
 
 ---
 
 ## antigravity-dashboard
-
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/antigravity-dashboard`
 
 - `.gitignore` (0.2 KB)
-- `/dist/` (directory)
+- `/dist/`
 - `index.html` (0.9 KB)
 - `package.json` (0.9 KB)
 - `README.md` (2.7 KB)
 - `server.js` (15.5 KB)
-- `/src/` (directory)
+- `/src/`
 - `vite.config.js` (0.3 KB)
 
 ---
 
 ## antigravity-quota-widget
-
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/antigravity-quota-widget`
 
 - `install.ps1` (2.3 KB)
@@ -34,11 +30,10 @@ Base path: `C:/Users/nimro/.gemini/antigravity/scratch`
 ---
 
 ## fashion-pattern-helper
-
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/fashion-pattern-helper`
 
 - `app.js` (142.4 KB)
-- `/dist/` (directory)
+- `/dist/`
 - `index.html` (20.0 KB)
 - `package.json` (0.2 KB)
 - `styles.css` (41.1 KB)
@@ -46,10 +41,9 @@ Base path: `C:/Users/nimro/.gemini/antigravity/scratch`
 ---
 
 ## klaviyo-agency
-
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/klaviyo-agency`
 
-- `/dashboard/` (directory)
+- `/dashboard/`
 - `email_copy_templates.md` (2.7 KB)
 - `klaviyo_flow_architecture.md` (1.6 KB)
 - `outreach_templates.md` (1.9 KB)
@@ -57,7 +51,6 @@ Base path: `C:/Users/nimro/.gemini/antigravity/scratch`
 ---
 
 ## mcp-client
-
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/mcp-client`
 
 - `check-composio-apps.js` (3.6 KB)
@@ -70,45 +63,43 @@ Base path: `C:/Users/nimro/.gemini/antigravity/scratch`
 ---
 
 ## ruthless-chess-coach
-
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/ruthless-chess-coach`
 
 - `check-braces.cjs` (0.7 KB)
-- `/dist/` (directory)
+- `/dist/`
 - `index.html` (1.3 KB)
 - `package.json` (0.6 KB)
-- `/src/` (directory)
+- `/src/`
 - `vite.config.js` (0.2 KB)
 
 ---
 
 ## superpowers
-
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/superpowers`
 
-- `/.claude-plugin/` (directory)
-- `/.codex-plugin/` (directory)
-- `/.cursor-plugin/` (directory)
+- `/.claude-plugin/`
+- `/.codex-plugin/`
+- `/.cursor-plugin/`
 - `.gitattributes` (0.4 KB)
-- `/.github/` (directory)
+- `/.github/`
 - `.gitignore` (0.1 KB)
-- `/.opencode/` (directory)
+- `/.opencode/`
 - `.version-bump.json` (0.6 KB)
 - `AGENTS.md` (0.0 KB)
-- `/assets/` (directory)
+- `/assets/`
 - `CLAUDE.md` (8.3 KB)
 - `CODE_OF_CONDUCT.md` (5.1 KB)
-- `/docs/` (directory)
+- `/docs/`
 - `gemini-extension.json` (0.2 KB)
 - `GEMINI.md` (0.1 KB)
-- `/hooks/` (directory)
+- `/hooks/`
 - `LICENSE` (1.1 KB)
 - `package.json` (0.1 KB)
 - `README.md` (8.2 KB)
 - `RELEASE-NOTES.md` (65.2 KB)
-- `/scripts/` (directory)
-- `/skills/` (directory)
-- `/tests/` (directory)
+- `/scripts/`
+- `/skills/`
+- `/tests/`
 
 ---
 
