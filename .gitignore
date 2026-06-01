@@ -1,0 +1,28 @@
+# Only markdown files belong in this repo.
+# No source code, scripts, configs, or binaries.
+
+# JavaScript / Node
+*.js
+*.ts
+*.json
+node_modules/
+
+# Python
+*.py
+
+# Configs & secrets
+*.env
+*.config
+*.yaml
+*.yml
+*.xml
+*.toml
+
+# Binaries & archives
+*.exe
+*.zip
+*.tar
+*.gz
+
+# Generated files (keep locally, never push)
+context_bundle.md
