@@ -14,8 +14,9 @@ This repository is the **live context sync** between Nimrod's local Antigravity 
 | `agents_handbook.md` | All Antigravity subagents — roles, capabilities, and when to invoke each |
 | `power_commands.md` | **Shorthand trigger commands** — type `@outreach`, `@status`, `@draft-email` etc. for instant responses |
 | `pc_path_map.md` | **Exact absolute paths** for every key file, folder, and script on Nimrod's PC |
+| `skills_reference.md` | **All 16 skills** across all plugins — what each does, when it triggers, and file paths |
 | `antigravity-system/mcp_servers.md` | All MCP server integrations — what each does and how to trigger them |
-| `antigravity-system/installed_plugins.md` | All installed plugins and their available skills |
+| `antigravity-system/installed_plugins.md` | All installed plugins with descriptions |
 | `active-session/checklist.md` | Current active task list (updated after each work session) |
 | `active-session/walkthrough.md` | Summary of recent completed work |
 | `active-session/chat_history.md` | Recent conversation highlights from the Antigravity session |
