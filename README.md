@@ -8,5 +8,8 @@ This repository contains the live, synced state of Nimrod's local development en
 - **/master_workspace_profile.md**: Master context summary of Nimrod's business targets, goals, and technical designs.
 
 ## Active Project Focus
-Nimrod is currently working on: **outreach-analytics-dashboard**
-Repo link: https://github.com/nimrod-zylobot/outreach-analytics-dashboard
+Nimrod's main focus is **building automations that directly assist his e-commerce agency business**:
+- Scraper and research scripts to find active Shopify store owners.
+- Cold outreach automation (Gmail and sheets integration) to speed up pitch delivery.
+- Designing high-converting Klaviyo sequences (abandoned cart flows) to sell to clients.
+- The ultimate goal is client acquisition, closing deals, and driving agency revenue to hit the $10,000 target. Codebases like the dashboard are secondary tools supporting this core outreach engine.

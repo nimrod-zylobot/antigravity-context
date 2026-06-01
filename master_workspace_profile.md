@@ -16,15 +16,12 @@ This document aggregates the essential background context, business objectives, 
 
 ## 🛠️ Project Ecosystem & Codebases
 
-### 1. Outreach Analytics & Lead Automation Dashboard
-- **Path:** `C:/Users/nimro/AppData/Local/Microsoft/WindowsApps/...` (Mapped dynamically in scratch folder).
-- **GitHub:** [outreach-analytics-dashboard](https://github.com/nimrod-zylobot/outreach-analytics-dashboard)
-- **Stack:** Next.js (App Router), React, Google Sheets API, Gmail API.
-- **Functionality:** 
-  - Dynamically fetches leads directly from Nimrod's active Google Sheet tracker.
-  - Monitors and displays real-time Gmail event tickers (outbound pitches sent and replies received).
-  - Uses OAuth2 to securely connect to Google APIs and pull active threads on the fly.
-  - Automatically updates the status of leads to "replied" when an active response thread is parsed in Gmail.
+## Active Business & Project Focus
+Nimrod's main focus is **building automations that directly assist his e-commerce agency business**:
+- Scraper and research scripts to find active Shopify store owners.
+- Cold outreach automation (Gmail and sheets integration) to speed up pitch delivery.
+- Designing high-converting Klaviyo sequences (abandoned cart flows) to sell to clients.
+- The ultimate goal is client acquisition, closing deals, and driving agency revenue to hit the $10,000 target. Codebases like the dashboard are secondary tools supporting this core outreach engine.
 
 ---
 
