@@ -34,3 +34,9 @@ These are the active integrations configured in Nimrod's PC environment.
 * **What it does:** Integration to read/write Notion blocks, databases, and pages.
 * **Core Operations:** `API-retrieve-a-database`, `API-post-page`
 * **Use Cases:** Documenting CRM task details.
+
+### 6. Composio (`composio`)
+* **What it does:** Secure app-integration proxy enabling Antigravity to connect with 250+ SaaS platforms (Slack, Gmail, HubSpot, Shopify, etc.).
+* **Core Operations:** `COMPOSIO_SEARCH_TOOLS`, `COMPOSIO_GET_TOOL_SCHEMAS`, `COMPOSIO_MANAGE_CONNECTIONS`
+* **Use Cases:** Triggering cross-device operations, checking workspace integrations, or executing external outreach pipelines.
+* **Triggering:** Ask Nimrod's PC agent to run Composio integration queries.

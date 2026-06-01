@@ -4,29 +4,6 @@
 
 **Antigravity**: 
 
-**Antigravity**: The rules have been updated!
-
-I modified [master_workspace_profile.md](file:///C:/Users/nimro/.gemini/antigravity/scratch/antigravity-context/master_workspace_profile.md) on your local drive to include the **Output Efficiency & Token Saving Rules** under the operating guidelines. I then executed the sync script, which successfully committed and pushed the changes to your private GitHub repository `nimrod-zylobot/antigravity-context`.
-
-Claude on your phone will now follow this concise, diff-focused format, ensuring maximum efficiency and avoiding chat context limit warnings. 
-
-Let me know if there's anything else you'd like to configure, or if you're ready to test your mobile bridge!
-
-**User**: why did you put the business automation folder inside the github repo? i didnt ask you to put the source code there, remove that folder from there
-
-
-The current local time is: 2026-06-01T18:04:04+05:30.
-
-**Antigravity**: 
-
-**Antigravity**: 
-
-**Antigravity**: 
-
-**Antigravity**: 
-
-**Antigravity**: 
-
 **Antigravity**: 
 
 **Antigravity**: 
@@ -81,5 +58,33 @@ The current local time is: 2026-06-01T18:09:41+05:30.
 **Antigravity**: 
 
 **Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: I have updated the sync engine to replace the raw JSON config files with a clean, functional Markdown file: **`mcp_servers.md`**.
+
+### What I did:
+1. **Created `mcp_servers.md`**: Explains each active MCP server (`google-workspace`, `github`, `agentmemory`, `stitchmcp`, `notion`), mapping them to:
+   - What they connect to.
+   - Core Operations (exact tool API names).
+   - Use Cases (relevance to your outreach & automation goals).
+   - How/when they are triggered.
+2. **Removed raw JSON config**: Deleted the local `mcp_servers.json` file.
+3. **Pushed Update**: Synced the repository changes to GitHub.
+
+This completely hides your raw configuration paths and environment strings from the Claude Project, replacing them with a highly efficient Markdown brief. Let me know when you've started the new thread in Claude on your phone!
+
+**User**: where is the composio mcp server?
+
+
+The current local time is: 2026-06-01T18:11:37+05:30.
 
 **Antigravity**: 
