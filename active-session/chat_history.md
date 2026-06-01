@@ -18,20 +18,6 @@
 
 **Antigravity**: 
 
-**Antigravity**: 
-
-**Antigravity**: 
-
-**Antigravity**: 
-
-**Antigravity**: 
-
-**Antigravity**: 
-
-**Antigravity**: 
-
-**Antigravity**: 
-
 **Antigravity**: Awesome! The private repository **`antigravity-context`** has been created and synced. 
 
 ### What was completed:
@@ -69,6 +55,33 @@ The current local time is: 2026-06-01T16:01:19+05:30.
 **Antigravity**: 
 
 **Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: 
+
+**Antigravity**: You are completely right. Previously, the sync script only listed the high-level folder names of the plugins (e.g., `superpowers`, `android-cli-plugin`). It did not scan *inside* them to expose the individual skills themselves.
+
+I have updated the sync script to deeply scan all plugins. 
+
+### What is updated in `installed_plugins.md`:
+* The script now inspects each plugin directory (`C:\Users\nimro\.gemini\config\plugins\*`).
+* It checks if a `skills` folder exists inside the plugin.
+* If found, it lists **every individual skill** by name.
+* It parses the `SKILL.md` file of each skill to extract and include its **exact description frontmatter** (e.g., *Use when starting any conversation - establishes how to find and use skills...*).
+
+I ran the updated script, and the deep skill structures have been compiled and pushed to your **`antigravity-context`** GitHub repository! Claude will now have visibility over every single sub-skill available in your environment.
+
+**User**: put all the context of all the conversations and projects from here to the github repo, so the claude project knows what to say in which chat inside Antigravity and what to do in which project inside Antigravity. only keep the API, passwords and credentials behind
+
+
+The current local time is: 2026-06-01T16:07:39+05:30.
 
 **Antigravity**: 
 
