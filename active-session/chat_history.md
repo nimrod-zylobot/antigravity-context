@@ -4,16 +4,6 @@
 
 ---
 
-**Antigravity:** Let me read all the files and generate one combined bundle:
-
-**Antigravity:** Now I have all the content. Let me build the bundle and the auto-generate script simultaneously:
-
-**Antigravity:** Now create the auto-generator script so you can regenerate the bundle with one command whenever files change:
-
-**Antigravity:** Test it runs cleanly:
-
-**Antigravity:** The script ran. Now push everything to GitHub and confirm the bundle size:
-
 **Antigravity:** All 9 sections generated cleanly. ✅ Here's the full summary:
 
 ---
@@ -161,3 +151,38 @@ The logic is **additive only** — it never overwrites existing descriptions, on
 2. **`android-cli-plugin/references` flagged as a new skill** — that's a `references/` subfolder inside the skill dir, not a skill itself. The scanner needs to only pick up dirs that contain a `SKILL.md`
 
 **Antigravity:** Now also clean up the 92 false-positive placeholder entries that got appended to `automations_handbook.md` in the first run, then do a clean test:
+
+**Antigravity:** All clean. ✅ Here's the full picture of what the sync now does:
+
+---
+
+### What happens when you say "Sync the context repo to GitHub"
+
+```
+── Auto-refresh (always updated) ──────────────
+  ✅ checklist.md          ← from brain/task.md
+  ✅ walkthrough.md        ← from brain/walkthrough.md
+  ✅ chat_history.md       ← last 25 transcript messages
+  ✅ projects_inventory.md ← scanned from scratch folder
+
+── Change detection (only updates if something new) ──
+  ✅ installed_plugins.md  ← detects new plugins in config/plugins/
+  ✅ skills_reference.md   ← detects new SKILL.md files
+  ✅ mcp_servers.md        ← detects new servers in antigravity/mcp/
+  ✅ automations_handbook  ← detects genuinely new automation scripts
+```
+
+**If something new is found**, it appends a placeholder section with a `⚠️ NEW — NEEDS DESCRIPTION` marker so you know to manually fill in the details. It never overwrites existing hand-crafted content — only adds.
+
+**Never touched:** `README.md`, `master_workspace_profile.md`, `agents_handbook.md`, `power_commands.md`, `pc_path_map.md`
+
+**User:** initially we had only genuine automations that were useful to me, now we have useless ones added too, what we can do is, remove the newly added empty automations, and you wont auto write in that .md file, i will command you to write any new automations if added that too with complete context, the way you wrote the initial automations, also add the mcps and skills and plugins and agents on my command only, not automatically
+
+
+The current local time is: 2026-06-01T19:38:23+05:30.
+
+**Antigravity:** First let me check what got into `automations_handbook.md` and clean it up:
+
+**Antigravity:** I've seen enough — everything after line 47 is junk. Restoring `automations_handbook.md` to the clean original and simplifying the sync script simultaneously:
+
+**Antigravity:** Now strip the sync script back to only the 4 auto-refresh files — no detection logic at all:
