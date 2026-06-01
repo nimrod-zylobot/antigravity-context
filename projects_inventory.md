@@ -58,24 +58,6 @@ Files & Folders:
 
 ---
 
-## Project: **outreach-analytics-dashboard**
-Path: `C:/Users/nimro/.gemini/antigravity/scratch/outreach-analytics-dashboard`
-Files & Folders:
-  - `.gitignore` (0.5 KB)
-  - `/.next` (directory)
-  - `AGENTS.md` (0.3 KB)
-  - `CLAUDE.md` (0.0 KB)
-  - `eslint.config.mjs` (0.4 KB)
-  - `jsconfig.json` (0.1 KB)
-  - `next.config.mjs` (0.1 KB)
-  - `package.json` (0.4 KB)
-  - `postcss.config.mjs` (0.1 KB)
-  - `/public` (directory)
-  - `README.md` (1.4 KB)
-  - `/src` (directory)
-
----
-
 ## Project: **ruthless-chess-coach**
 Path: `C:/Users/nimro/.gemini/antigravity/scratch/ruthless-chess-coach`
 Files & Folders:
