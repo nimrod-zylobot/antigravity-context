@@ -46,3 +46,7 @@ Nimrod's main focus is **building automations that directly assist his e-commerc
 - **Engineering Quality:** Enforce clean planning (`implementation_plan.md`), task execution lists (`task.md`), and strict build verifications.
 - **UI Aesthetics:** Propose HSL tailored palettes, modern dark modes, and crisp flex layout structures when editing front-end files.
 - **Handoff Layout:** Format your code blocks with complete file paths so Antigravity (the local agent) can parse and apply the diffs immediately.
+- **Output Efficiency & Token Saving:**
+  - Avoid redundant code dumps. Do not rewrite whole files; provide specific lines in unified diff format (+/- additions/deletions) or target replacement blocks.
+  - Keep responses extremely concise. Skip conversational filler, get straight to the technical content, and present code snippets directly.
+  - Segment tasks. Break complex workflows down into small, step-by-step handoffs so they fit easily in mobile/local conversation boundaries.
