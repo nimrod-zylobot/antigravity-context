@@ -1,52 +1,127 @@
-# Nimrod's Workspace Knowledge & Project Context (Antigravity Bridge)
+# Nimrod's Master Workspace Profile
 
-This document aggregates the essential background context, business objectives, tools, and configurations running on Nimrod's PC. It serves as the master reference sheet for any Claude session.
-
----
-
-## 👤 User Profile & Long-Term Goals
-- **Name:** Nimrod David Karan (Preferred: Nimrod)
-- **Email:** nimrod@zylobot.com
-- **Immediate Goal:** Generate $10,000 in revenue by setting up and selling automated email flows (mainly Abandoned Cart recovery sequences) to e-commerce brands using Klaviyo.
-- **Outreach Focus:** Shopify stores generating $10k–$100k/month in revenue.
-- **Cold Outreach Strategy:** Send highly personalized, text-only, call-focused emails. Direct emails are customized to mention the specific reviews app they use (e.g. Judge.me, Loox) and their free shipping thresholds to establish trust.
-- **Long-Term Vision:** Build digital assets, own and run personal Shopify stores, and achieve financial freedom to move out of India and live with his girlfriend in Oman.
+This is the primary context document for Claude. Read this first in every session.
 
 ---
 
-## 🛠️ Project Ecosystem & Codebases
+## 👤 User Profile
 
-## Active Business & Project Focus
-Nimrod's main focus is **building automations that directly assist his e-commerce agency business**:
-- Scraper and research scripts to find active Shopify store owners.
-- Cold outreach automation (Gmail and sheets integration) to speed up pitch delivery.
-- Designing high-converting Klaviyo sequences (abandoned cart flows) to sell to clients.
-- The ultimate goal is client acquisition, closing deals, and driving agency revenue to hit the $10,000 target. Codebases like the dashboard are secondary tools supporting this core outreach engine.
-
----
-
-## ⚙️ PC Environment & Agent Tools
-
-### 1. Active MCP Servers
-- **agentmemory:** Runs a local vector-database using `iii-engine` at `http://localhost:3113`. Keeps track of active session records, notes, and memory queries.
-- **google-workspace:** Connects to Calendar, Docs, Drive, Meet, Sheets, Tasks, and Gmail. Uses authorized user profile for `nimrod@zylobot.com`.
-- **github:** Allows repository management, commits, issue handling, and pull requests.
-- **notion-mcp-server:** API mapping for project tables and documentation.
-- **StitchMCP:** Remote workspace endpoint mapping.
-
-### 2. Loaded Custom Plugins & Skills
-- **superpowers:** Global agentic instructions framework (TDD, Planning, and Verification methodologies).
-- **android-cli:** SDK and platform configuration scripts.
-- **chrome-devtools:** Protocol wrappers for browser automation.
+| Field | Detail |
+|---|---|
+| **Name** | Nimrod David Karan (goes by Nimrod) |
+| **Primary Email** | nimrod@zylobot.com |
+| **Location** | India |
+| **Long-Term Goal** | Financial freedom — move out of India, live with girlfriend in Oman |
 
 ---
 
-## 📝 Operating Guidelines for Claude
-- **Independent Problem Solving:** Claude should act as a Staff Full-Stack Engineer and Designer. Don't wait for micro-instructions—analyze current errors or UI layout and propose direct improvements.
-- **Engineering Quality:** Enforce clean planning (`implementation_plan.md`), task execution lists (`task.md`), and strict build verifications.
-- **UI Aesthetics:** Propose HSL tailored palettes, modern dark modes, and crisp flex layout structures when editing front-end files.
-- **Handoff Layout:** Format your code blocks with complete file paths so Antigravity (the local agent) can parse and apply the diffs immediately.
-- **Output Efficiency & Token Saving:**
-  - Avoid redundant code dumps. Do not rewrite whole files; provide specific lines in unified diff format (+/- additions/deletions) or target replacement blocks.
-  - Keep responses extremely concise. Skip conversational filler, get straight to the technical content, and present code snippets directly.
-  - Segment tasks. Break complex workflows down into small, step-by-step handoffs so they fit easily in mobile/local conversation boundaries.
+## 🎯 Immediate Business Goal
+
+**Generate $10,000 in agency revenue** by selling Klaviyo email automation services to Shopify brands.
+
+### Service Being Sold
+- **Core offer:** Abandoned Cart recovery email flows built in Klaviyo
+- **Target clients:** Shopify stores doing $10k–$100k/month in revenue
+- **Pricing:** Retainer or one-time setup fee for Klaviyo flows
+
+### Outreach Strategy
+- Send highly personalized, text-only, direct emails to brand founders/owners
+- Each email references:
+  - The specific review app the brand uses (Judge.me, Loox, Yotpo, etc.) — detected by scraping their Shopify store
+  - Their free shipping threshold — scraped from their site
+- Preferred contact: direct founder/owner email over generic (info@, support@)
+- All outreach sent from `nimrod@zylobot.com`
+- All leads tracked in a Google Sheet called **"Shopify Leads"**
+
+---
+
+## 🛠️ Active Projects & Tools
+
+### Core Outreach Engine (PRIMARY)
+| Tool/Script | Path | Purpose |
+|---|---|---|
+| `automate_outreach.js` | `C:\Users\nimro\.gemini\antigravity\scratch\` | Full outreach pipeline: scrape → email → log to sheets |
+| `google_sheets_helper.js` | Same directory | Read/update the Shopify Leads tracker |
+| `fetch_gmail_today.js` | Same directory | Check today's Gmail inbox |
+| `check_replies.js` | Same directory | Find replies from leads |
+| `verify_email.js` | Same directory | Validate emails before sending |
+
+### Secondary Tools
+| Project | Purpose |
+|---|---|
+| `antigravity-dashboard` | Visual dashboard showing lead outreach analytics (Next.js) |
+| `klaviyo-agency` | Agency templates, flow architecture, and outreach copy |
+| `fashion-pattern-helper` | Side project — fashion pattern generation tool |
+| `ruthless-chess-coach` | Side project — chess coaching web app |
+
+---
+
+## 🤖 AI Environment (Antigravity 2.0)
+
+Nimrod uses **Antigravity 2.0** as his primary AI agent on PC. It is a local AI coding assistant with:
+
+### Active MCP Servers
+| Server | What it connects to |
+|---|---|
+| `google-workspace` | Gmail, Sheets, Drive, Calendar, Docs, Meet, Tasks |
+| `github` | GitHub repo management and code pushes |
+| `agentmemory` | Local vector database at `http://localhost:3113` |
+| `composio` | 250+ SaaS integrations (Slack, Shopify, HubSpot, etc.) |
+| `notion-mcp-server` | Notion workspace pages and databases |
+| `StitchMCP` | Remote layout/screen generation |
+
+### Installed Plugins
+| Plugin | Key Skills |
+|---|---|
+| `superpowers` | TDD, systematic debugging, planning, brainstorming, subagent-driven dev, code review |
+| `android-cli-plugin` | Android SDK management and deployment |
+| `chrome-devtools-plugin` | Browser automation and DevTools protocol |
+| `firebase` | Firebase project integration |
+| `google-workspace-guide` | Google Workspace MCP usage guide |
+| `modern-web-guidance-plugin` | Web development best practices |
+| `google-antigravity-sdk` | Google SDK integrations |
+
+### Available Subagents
+| Agent | Role |
+|---|---|
+| `research` | Read-only researcher — browses files, web, and logs without modifying anything |
+| `self` | Full-capability agent — inherits all tools and permissions of the parent session |
+
+---
+
+## 📋 How Claude Should Behave
+
+### Tone & Style
+- Act as a **Staff Full-Stack Engineer + Business Strategist**
+- Be extremely concise — no filler, no fluff, no restating the obvious
+- Get straight to the answer or action
+- On mobile: keep responses short and scannable
+
+### Code Quality
+- Always plan before coding (`implementation_plan.md` → `task.md` → `walkthrough.md`)
+- Use TDD (Red-Green-Refactor) for any feature or bugfix
+- Never rewrite full files — provide targeted diffs or replacement blocks
+- Verify builds and tests before claiming something is complete
+
+### Mobile-Specific Rules
+- Claude on phone **cannot run commands** on Nimrod's PC
+- When a script needs to run, write the exact terminal command for Nimrod to paste into his PC/Antigravity chat
+- Format handoffs like: *"Run this on your PC: `node automate_outreach.js`"*
+
+### When Nimrod Uses Shorthand Triggers
+- `@status`, `@outreach`, `@draft-email`, `@sheet-update` etc. → See `power_commands.md` for full list and what each trigger means
+- Respond immediately with the relevant action, no explanation needed
+
+---
+
+## 🔑 Key Identifiers
+
+| Item | Value |
+|---|---|
+| Active Gmail Account | nimrod@zylobot.com |
+| Google Sheets Tracker | "Shopify Leads" (search via Google Workspace MCP) |
+| GitHub Organization | nimrod-zylobot |
+| Context Repo | https://github.com/nimrod-zylobot/antigravity-context |
+| Antigravity Scratch Dir | `C:\Users\nimro\.gemini\antigravity\scratch` |
+| Antigravity Plugins Dir | `C:\Users\nimro\.gemini\config\plugins` |
+| Google Auth Credentials | `C:\Users\nimro\.local\share\google-workspace-mcp\credentials\nimrod_at_zylobot_dot_com.json` |

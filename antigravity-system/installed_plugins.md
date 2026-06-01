@@ -1,35 +1,96 @@
-### Plugin: **android-cli-plugin**
-Available Skills:
-  - **references**
+# 🔌 Installed Plugins & Skills
 
-### Plugin: **chrome-devtools-plugin**
-  - *(No sub-skills defined)*
+These are all the plugins loaded into Nimrod's Antigravity 2.0 environment. Each plugin extends what the AI agent can do.
 
-### Plugin: **firebase**
-  - *(No sub-skills defined)*
+---
 
-### Plugin: **google-antigravity-sdk**
-  - *(No sub-skills defined)*
+## 1. Superpowers (`superpowers`)
 
-### Plugin: **google-workspace-guide**
-Available Skills:
+**What it is:** A complete agentic software engineering methodology framework, adapted from [obra/superpowers](https://github.com/obra/superpowers). Enforces TDD, systematic planning, and code quality gates.
 
-### Plugin: **modern-web-guidance-plugin**
-  - *(No sub-skills defined)*
+**Skills available:**
 
-### Plugin: **superpowers**
-Available Skills:
-  - **brainstorming** - *"You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."*
-  - **dispatching-parallel-agents** - *Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies*
-  - **executing-plans** - *Use when you have a written implementation plan to execute in a separate session with review checkpoints*
-  - **finishing-a-development-branch** - *Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup*
-  - **receiving-code-review** - *Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation*
-  - **requesting-code-review** - *Use when completing tasks, implementing major features, or before merging to verify work meets requirements*
-  - **subagent-driven-development** - *Use when executing implementation plans with independent tasks in the current session*
-  - **systematic-debugging** - *Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes*
-  - **test-driven-development** - *Use when implementing any feature or bugfix, before writing implementation code*
-  - **using-git-worktrees** - *Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback*
-  - **using-superpowers** - *Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions*
-  - **verification-before-completion** - *Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always*
-  - **writing-plans** - *Use when you have a spec or requirements for a multi-step task, before touching code*
-  - **writing-skills** - *Use when creating new skills, editing existing skills, or verifying skills work before deployment*
+| Skill | When to use |
+|---|---|
+| `using-superpowers` | Use at the start of every conversation — checks which skills are relevant before responding |
+| `brainstorming` | Use **before any creative work** — features, UI, new functionality. Explores requirements first |
+| `writing-plans` | Use when given a spec or multi-step task **before touching code** |
+| `executing-plans` | Use when running an approved implementation plan in a separate session with checkpoints |
+| `subagent-driven-development` | Use when executing plans with independent parallel tasks in the current session |
+| `test-driven-development` | Use **before writing any implementation code** — enforces Red-Green-Refactor cycles |
+| `systematic-debugging` | Use when hitting any bug, test failure, or unexpected behavior — diagnose before fixing |
+| `requesting-code-review` | Use when completing a feature or major change — verify work before merging |
+| `receiving-code-review` | Use when getting review feedback — requires rigor, not blind agreement |
+| `dispatching-parallel-agents` | Use when 2+ independent tasks can run without shared state dependencies |
+| `using-git-worktrees` | Use before feature work needing isolation from current workspace |
+| `finishing-a-development-branch` | Use when implementation is complete — guides merge, PR, or cleanup decisions |
+| `verification-before-completion` | Use before claiming anything is "done" or "passing" — requires evidence from commands |
+| `writing-skills` | Use when creating or editing new skills for the plugin system |
+
+---
+
+## 2. Android CLI (`android-cli-plugin`)
+
+**What it is:** Orchestrates Android development tasks from the command line.
+
+**Skills available:**
+
+| Skill | What it does |
+|---|---|
+| `android-cli` | Creates Android projects, deploys APKs, manages SDK, diagnoses environment issues |
+
+**When to use:** Any Android app development, testing, or SDK management task.
+
+---
+
+## 3. Chrome DevTools (`chrome-devtools-plugin`)
+
+**What it is:** Protocol wrappers for browser automation using Chrome DevTools Protocol.
+
+**When to use:** Browser automation, scraping DOM elements, intercepting network requests, debugging web apps in a live browser session.
+
+---
+
+## 4. Firebase (`firebase`)
+
+**What it is:** Firebase project integration plugin.
+
+**When to use:** Firebase Authentication, Firestore, Realtime Database, or Firebase Hosting tasks.
+
+---
+
+## 5. Google Workspace Guide (`google-workspace-guide`)
+
+**What it is:** A skill guide for using and troubleshooting the Google Workspace MCP server, including custom APIs.
+
+**Skills available:**
+
+| Skill | What it does |
+|---|---|
+| `google-workspace` | Best practices for using Gmail, Sheets, Drive, and Docs via MCP. Includes troubleshooting patterns. |
+
+---
+
+## 6. Modern Web Guidance (`modern-web-guidance-plugin`)
+
+**What it is:** Web development best practices and UI/UX guidance plugin.
+
+**When to use:** Building web apps — enforces modern design patterns (dark mode, glassmorphism, animations, responsive layouts, SEO best practices).
+
+---
+
+## 7. Google Antigravity SDK (`google-antigravity-sdk`)
+
+**What it is:** Google SDK integrations specific to the Antigravity platform.
+
+**When to use:** Google API integrations beyond what the Workspace MCP covers.
+
+---
+
+## 📍 Plugin Directory
+
+All plugins are installed at: `C:\Users\nimro\.gemini\config\plugins\`
+
+Each plugin folder contains:
+- `plugin.json` — plugin manifest and metadata
+- `skills/` — one folder per skill, each with a `SKILL.md` instruction file
