@@ -26,3 +26,4 @@ node_modules/
 
 # Generated files (keep locally, never push)
 context_bundle.md
+context_quick.md
