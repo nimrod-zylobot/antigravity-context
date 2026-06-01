@@ -4,275 +4,6 @@
 
 ---
 
-**Antigravity:** Done. Here's the summary of everything simplified:
-
----
-
-### What you actually need
-
-**1. Upload [`context_quick.md`](file:///C:/Users/nimro/.gemini/antigravity/scratch/antigravity-context/context_quick.md) to Claude Project**
-~4KB (was 41.9KB). That's all. No GitHub connection needed.
-
-**2. The GitHub repo stays on your PC** — it's just a local sync/backup. Claude never touches it directly.
-
-**3. What Claude now knows from that one file:**
-- What MCP servers exist and what they connect to
-- What scripts exist and their exact commands
-- What skills and subagents are available on PC
-- Engineering standards to follow when planning builds
-- Power commands to respond to instantly
-
-**4. What Claude no longer needs to know:**
-- Your personal goals and life story
-- Business outreach strategy details
-- Plugins list (redundant with skills)
-- File path deep-dives (available on demand if needed)
-
-This is the right framing — Claude as a **professional software engineer who knows your tech stack**, not a personal assistant who knows everything about you.
-
-**User:** # Role & Identity
-You are an elite, independent Staff Software Engineer, Full-Stack Designer, and Systems Architect. You act as a highly capable co-developer for Nimrod, collaborating on complex applications, websites, autonomous agents, and workflows. Be proactive — offer system-level solutions, elegant designs, and structured project plans without waiting to be asked.
-
----
-
-# Context — Always Load First
-
-At the start of every session, your primary context source is the GitHub repository:
-**https://github.com/nimrod-zylobot/antigravity-context**
-
-Read these files in this priority order:
-
-1. `master_workspace_profile.md` — Who Nimrod is, business goals, outreach strategy, PC environment, how to respond
-2. `active-session/checklist.md` — Current task status (what's in progress, what's done)
-3. `active-session/chat_history.md` — Key decisions and context from the last PC session
-4. `pc_path_map.md` — Exact absolute paths for all scripts, projects, and folders on Nimrod's PC
-5. `power_commands.md` — Shorthand triggers Nimrod uses (@outreach, @status, @draft-email, etc.)
-
-Reference these when needed:
-- `projects_inventory.md` — All active codebases with paths
-- `automations_handbook.md` — All automation scripts and their exact terminal commands
-- `skills_reference.md` — All 16 engineering skills and when to apply them
-- `agents_handbook.md` — All subagents (research, self), their roles, and handoff format
-- `antigravity-system/mcp_servers.md` — All MCP integrations (Gmail, Sheets, GitHub, Composio, etc.)
-
----
-
-# Revenue-First Filter
-Before any build or feature, ask: **does this directly accelerate client acquisition or revenue?**
-- PRIMARY: Shopify outreach automation, Gmail/Sheets pipeline, Klaviyo flow templates
-- SECONDARY: Dashboards, tools, apps supporting the above
-- DEFER: Anything that doesn't connect to closing clients or generating $10k
-
----
-
-# Pre-Build Protocol — Always Follow This Before Coding
-
-For any non-trivial build:
-
-1. **Brainstorm first** — Apply the `br
-
-s by base name. Get absolute paths from `pc_path_map.md`, not from memory
-
----
-
-# Handoff & PC Compatibility
-
-**Claude on phone cannot execute commands on Nimrod's PC.**
-
-When a script or command needs to run:
-- Write the exact terminal command in a code block
-- Tell Nimrod to paste it into his PC terminal or Antigravity chat
-- Format: *"Run this on your PC: `node automate_outreach.js`"*
-
-All commands must be Windows/PowerShell compatible. Use `;` not `&&` for chaining.
-Working directory for automation scripts: `C:\Users\nimro\.gemini\antigravity\scratch`
-
-**MCP tools available on PC (not phone):** Google Workspace (Gmail, Sheets, Drive), GitHub, AgentMemory, Composio, Notion, StitchMCP. See `antigravity-system/mcp_servers.md` for full operation details.
-
-**Subagents available on PC:** `research` (read-only researcher) and `self` (full-capability). Tell Nimrod when to invoke one, e.g. *"Ask Antigravity to invoke a research subagent to..."*
-
----
-
-# Power Commands
-Nimrod uses shorthand triggers for fast mobile interactions. Recognize and act on them immediately:
-
-| Trigger | Action |
-|---|---|
-| `@status` | Summarize active tasks from checklist |
-| `@outreach` | Give exact terminal command to run the outreach automation |
-| `@replies` | Give command to check Gmail for lead replies |
-| `@sheet-update [brand] [status]` | Give exact command to update that lead's status |
-| `@draft-email [brand] [name]` | Write a personalized cold email using template style |
-| `@draft-followup [brand]` | Draft a 5-7 day follow-up email |
-| `@klaviyo-pitch [brand]` | Write a Klaviyo agency pitch tailored to that brand |
-| `@plan [task]` | Write a full implementation plan before touching code |
-| `@debug [issue]` | Activate systematic-debugging mode |
-| `@sync` | Tell Nimrod to run `node sync_git_context.js` to push context updates |
-
-Full list in `power_commands.md`.
-
-Any changes to make to the Claude Project Instructions?
-
-
-The current local time is: 2026-06-01T20:08:30+05:30.
-
-**Antigravity:** Yes — several things need to change based on what we just established:
-
-1. **"Context — Always Load First" is broken** — it tells Claude to fetch from the GitHub repo, which Claude.ai cannot do. Should reference the uploaded file instead.
-2. **"Revenue-First Filter"** — you said Claude doesn't need to know much about you personally. This whole section can go.
-3. **"File references — Get absolute paths from `pc_path_map.md`"** — that file isn't uploaded, so Claude can't access it. Should say paths are in the uploaded context file.
-4. **"Full list in `power_commands.md`"** and **"See `mcp_servers.md`"** — same problem, those files aren't loaded. Power commands need to be self-contained right here.
-5. **"Full skill list in `skills_reference.md`"** — same issue.
-
-Here's the corrected version:
-
----
-
-```
-# Role & Identity
-You are an elite Staff Software Engineer, Full-Stack Designer, and Systems Architect acting as co-developer for Nimrod. Be proactive — offer system-level solutions, elegant designs, and structured project plans without waiting to be asked.
-
----
-
-# System Context
-
-The uploaded file `context_quick.md` contains everything you need about the PC environment:
-- What MCP servers are available and what they connect to
-- What automation scripts exist and their exact commands
-- What skills and subagents are available on PC
-- Exact power command triggers
-
-Read it at the start of every session. Do not attempt to fetch anything from GitHub or external URLs — Claude on phone cannot make web requests.
-
----
-
-# Pre-Build Protocol — Always Follow Before Coding
-
-1. **Brainstorm first** — Explore requirements, design intent, and edge cases before writing a plan
-2. **Write a phased implementation plan** — API/DB layer → Business logic → UI → Verification. Do not write code before the plan is approved
-3. **Use TDD** — Write failing tests before implementation code (Red → Green → Refactor)
-4. **Verify before declaring done** — Run build/test commands, show actual output. Never claim s
-
-re proceeding
-4. **File references** — Use exact paths from `context_quick.md`. Never guess paths.
-
----
-
-# Handoff & PC Compatibility
-
-**Claude on phone cannot execute commands on Nimrod's PC.**
-
-When a command needs to run:
-- Write the exact terminal command in a code block
-- Format: *"Run this on your PC: `node automate_outreach.js`"*
-
-All commands must be Windows/PowerShell compatible:
-- Use `;` not `&&` for chaining commands
-- Working directory for scripts: `C:\Users\nimro\.gemini\antigravity\scratch`
-
-For MCP operations or subagent tasks: write a handoff prompt for Nimrod to paste into Antigravity on PC.
-
----
-
-# Power Commands
-Respond immediately with the action — no explanation needed.
-
-| Trigger | Action |
-|---|---|
-| `@outreach` | Give command: `node automate_outreach.js` |
-| `@replies` | Give command: `node check_replies.js` |
-| `@count` | Give command: `node count_status.js` |
-| `@sheet-update [brand] [status]` | Give exact Sheets update command |
-| `@draft-email [brand] [name]` | Write personalized cold outreach email |
-| `@draft-followup [brand]` | Write 5–7 day follow-up email |
-| `@klaviyo-pitch [brand]` | Write Klaviyo agency pitch for that brand |
-| `@plan [task]` | Write full phased implementation plan before any code |
-| `@debug [issue]` | Diagnose root cause before proposing fix |
-| `@sync` | Tell Nimrod: run `node sync_git_context.js` |
-```
-
----
-
-**What changed and why:**
-
-| Old | Problem | Fix |
-|---|---|---|
-| "Load from GitHub repo" | Claude.ai can't fetch URLs | "Read the uploaded `context_quick.md`" |
-| Revenue-First Filter | Personal business strategy Claude doesn't need | Removed |
-| "Get paths from `pc_path_map.md`" | File not uploaded, inaccessible | "Use paths from `context_quick.md`" |
-| "Full list in `power_commands.md`" | File not uploaded | Power commands are now self-contained inline |
-| "See `mcp_servers.md`" | File not uploaded | Removed — MCPs are in `context_quick.md` |
-| "See `skills_reference.md`" | File not uploaded | Removed — skills are in `context_quick.md` |
-
-**User:** and how will i give it context of how the project is going here in antigravity so it can make improvements or changes to whatever we build here
-
-
-The current local time is: 2026-06-01T20:12:13+05:30.
-
-**Antigravity:** This is the key gap. The solution is a **two-layer approach**:
-
----
-
-## Layer 1 — Always loaded (uploaded to Claude Project)
-`context_quick.md` — the system reference. Claude always knows what tools, scripts, MCPs, and skills exist. This never changes unless you add something new to Antigravity.
-
-## Layer 2 — Pasted per session when needed
-When you want Claude to know what's happening in a specific project, you paste just the relevant piece at the start of the conversation. Three scenarios:
-
----
-
-### Scenario A — You want to plan something new
-Just tell Claude what you want to build. No extra context needed. It knows the system from `context_quick.md` and will ask what it needs.
-
----
-
-### Scenario B — You want Claude to improve/change something already built
-Paste the specific file(s) that need changing. Example:
-
-> *"Here's the current `server.js` for my dashboard. Add a route that does X."*
-> *(paste only the relevant section, not the whole file)*
-
----
-
-### Scenario C — You want Claude to know current build status
-After running the sync on PC, open `active-session/checklist.md` and paste it directly into the chat:
-
-> *"Here's where we are on the current build: [paste checklist.md content]"*
-
-The checklist is small (~20 lines) so it costs almost nothing.
-
----
-
-## The Practical Flow
-
-```
-New Claude conversation
-        ↓
-Claude auto-loads context_quick.md
-        ↓
-You say what you need
-        ↓
-If Claude needs project state  →  paste checklist.md (10 sec)
-If Claude needs current code   →  paste specific file/function
-If Claude needs build history  →  paste walkthrough.md
-```
-
----
-
-## One More Option — Update `context_quick.md` to include a "Current Project" section
-
-I can add a section at the bottom of `context_quick.md` that you update whenever the active project changes. Something like:
-
-```md
-## 🏗️ Active Project
-Project: antigravity-dashboard
-Stack: Next.js + Google Sheets API + Gmail API
-Current focus: [you update this line]
-Repo: github.com/nimrod-zylobot/outreach-analytics-dashboard
-```
-
-You update that one line, re-upload the file — Claude knows exactly which project you're on without needing the full checklist. Want me to add that section?
-
 **User:** no not this, but is the complete context of how things work here and what useful assets i have that can be used being given in the context_quick.md?
 
 
@@ -476,3 +207,24 @@ The current local time is: 2026-06-02T02:53:27+05:30.
 **Antigravity:** I am waiting for the sync command to complete and push the latest manual changes of the skills reference file (`skills_reference.md`) to your GitHub repository. I will notify you once it's complete.
 
 **Antigravity:** I am waiting a bit longer for the sync script to complete the Git push. I'll summarize once the system returns the status.
+
+**Antigravity:** I am waiting a little longer for the sync script to finalize the Git push. I will report back immediately when it finishes.
+
+**Antigravity:** I am waiting a little longer for the push to succeed. I'll summarize once the system returns the status.
+
+**Antigravity:** I am waiting a little longer for the push to succeed. I'll summarize once the system returns the status.
+
+**Antigravity:** The sync has completed successfully! 
+
+### What has been updated:
+* **[`skills_reference.md`](file:///C:/Users/nimro/.gemini/antigravity/scratch/antigravity-context/skills_reference.md)**: Updated with the 13 local custom skills on your system.
+* **GitHub Repository (`antigravity-context`)**: Pushed and up-to-date.
+
+Now, you have a clean setup:
+1. **GitHub is your primary context store**: It contains all the necessary architectural, business, and tool references.
+2. **Quota Protection**: You don't need to load large files or paste long texts into Claude's chat. Whenever you want to build something, you can just direct Claude to look up the relevant files from the GitHub repository as needed (e.g., pointing it to the specific skill or script description).
+
+**User:** also let the context_quick.md file be uploaded and updated in the github repo
+
+
+The current local time is: 2026-06-02T03:04:28+05:30.
