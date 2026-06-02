@@ -29,13 +29,6 @@ Base path: `C:/Users/nimro/.gemini/antigravity/scratch`
 
 ---
 
-## docs
-**Path:** `C:/Users/nimro/.gemini/antigravity/scratch/docs`
-
-- `/superpowers/`
-
----
-
 ## drafts
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/drafts`
 
