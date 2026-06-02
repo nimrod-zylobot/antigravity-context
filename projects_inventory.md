@@ -29,38 +29,6 @@ Base path: `C:/Users/nimro/.gemini/antigravity/scratch`
 
 ---
 
-## drafts
-**Path:** `C:/Users/nimro/.gemini/antigravity/scratch/drafts`
-
-- `followup1_almost_gods_dhruv.txt` (0.2 KB)
-- `followup1_angad_singh_angad.txt` (0.2 KB)
-- `followup1_aravalii_arshia.txt` (0.2 KB)
-- `followup1_aravalii_sarthak.txt` (0.2 KB)
-- `followup1_belif_sharad.txt` (0.2 KB)
-- `followup1_bella_belts_shopbellabelts.txt` (0.3 KB)
-- `followup1_beruru_radeesh.txt` (0.2 KB)
-- `followup1_blowhot_sanjeev.txt` (0.2 KB)
-- `followup1_contraband_ananya.txt` (0.2 KB)
-- `followup1_cosmix_soorya.txt` (0.2 KB)
-- `followup1_cosmix_vibha.txt` (0.2 KB)
-- `followup1_crocodile_chenduran.txt` (0.2 KB)
-- `followup1_diam_beauty_jhalakshah.txt` (0.2 KB)
-- `followup1_epigamia_ankur.txt` (0.2 KB)
-- `followup1_fur_jaden_sahil.txt` (0.2 KB)
-- `followup1_gear_bags_mohit.txt` (0.2 KB)
-- `followup1_glam21_glam21cosmetics.txt` (0.2 KB)
-- `followup1_gm_modular_jayanth.txt` (0.2 KB)
-- `followup1_hilaine_hilaine.txt` (0.2 KB)
-- `followup1_hoodies_for_heroes_hoodies.txt` (0.3 KB)
-- `followup1_insight_cosmetics_dinesh.txt` (0.2 KB)
-- `followup1_jagat_pharma_drmandeepsinghbasu.txt` (0.3 KB)
-- `followup1_jeannot_ceuticals_ravi.txt` (0.2 KB)
-- `followup1_jenpharm_myjenpharm.txt` (0.2 KB)
-- `followup1_just_corseca_ritesh.txt` (0.2 KB)
-- *...and 45 more*
-
----
-
 ## fashion-pattern-helper
 **Path:** `C:/Users/nimro/.gemini/antigravity/scratch/fashion-pattern-helper`
 
