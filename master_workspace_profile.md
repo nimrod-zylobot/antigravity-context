@@ -32,6 +32,7 @@ This is the primary context document for Claude. Read this first in every sessio
 - Preferred contact: direct founder/owner email over generic (info@, support@)
 - All outreach sent from `nimrod@zylobot.com`
 - All leads tracked in a Google Sheet called **"Shopify Leads"**
+- **Crucial Rule on Date Contacted:** The `Date Contacted` (Column F) in the sheet must *only* be updated when the initial outreach email is actually sent (via `automate_outreach.js`). Under no circumstances should any inbox-checking script, manual status updates, or reply-checking agents modify or overwrite this date when updating a lead's status (e.g. to "Replied").
 
 ---
 
