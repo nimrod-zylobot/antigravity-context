@@ -4,77 +4,6 @@
 
 ---
 
-**Antigravity:** Done. Here's what was missing and is now added:
-
-| Gap | What was missing | Now included |
-|---|---|---|
-| Skills | Only 8 of 16 listed | All 16 skills with exact trigger conditions |
-| Plugins | Not mentioned at all | All 7 plugins with what each enables |
-| Projects | Claude had no idea what exists | All 5 active projects with stack and purpose |
-| Key IDs | Email, GitHub org, sheet name/range | `nimrod@zylobot.com`, `nimrod-zylobot`, `"Shopify Leads"`, `Leads!A4:K100` |
-| Script | `update_lead_row.js` missing | Added |
-
-**File size: ~7KB** — still well under the token budget, about half of what the original bundle was.
-
-Now when you start any build conversation with Claude, it knows:
-- Every tool available to Antigravity (MCPs, plugins, scripts)
-- Every methodology it should follow (all 16 skills)
-- What already exists (projects, repos) so it doesn't suggest rebuilding things
-- Exact identifiers for commands (no guessing)
-
-**User:** and when i need the context of a particular project, should i ask you to make a context for a can add it as context of a partiular project i am working on next to the context_quick.md?
-
-
-The current local time is: 2026-06-01T20:47:16+05:30.
-
-**Antigravity:** Exactly — that's the right workflow. When you're about to start working on a project with Claude, ask me on PC:
-
-> *"Generate a context file for [project name]"*
-
-I'll scan the project folder, read the key files, and produce a `context_[project].md` that you upload alongside `context_quick.md` in Claude Project. When you're done with that project, remove it and upload the next one.
-
----
-
-### What a project context file would include:
-
-- **Stack** — framework, dependencies, what's running where
-- **Folder structure** — key files and what each does
-- **Current state** — what's built and working, what's broken
-- **Active checklist** — what needs to be done next
-- **Key decisions already made** — so Claude doesn't re-suggest things already decided
-- **Entry points** — which file to start editing for which type of change
-
----
-
-### The workflow:
-
-```
-Starting a build session with Claude
-          ↓
-1. Ask Antigravity: "Generate context file for antigravity-dashboard"
-2. Upload context_dashboard.md to Claude Project alongside context_quick.md
-3. Work with Claude — it has full system + full project context
-          ↓
-Done with project
-          ↓
-Remove context_dashboard.md, upload context_nextproject.md
-```
-
----
-
-Want me to generate one now for any of your existing projects as a test? Options are:
-- `antigravity-dashboard` (Next.js outreach analytics)
-- `klaviyo-agency` (templates and flows)
-- `fashion-pattern-helper`
-- `ruthless-chess-coach`
-
-**User:** arent there more skills mentioned inside C:\Users\nimro\.gemini\antigravity\skills which can be added in context_quick.md?
-
-
-The current local time is: 2026-06-01T21:18:58+05:30.
-
-**Antigravity:** These are completely different skills — highly relevant ones specific to your business. Let me read each SKILL.md quickly:
-
 **User:** continue
 
 
@@ -311,3 +240,56 @@ this is the instructions given to claude rn that takes context from context quic
 The current local time is: 2026-06-02T11:08:32+05:30.
 
 **Antigravity:** I am waiting for the sync script to finish committing and pushing the new `claude_instructions.md` file. I will notify you once it's complete.
+
+**Antigravity:** I am waiting for the sync push to succeed. I'll get back to you with the results in a moment.
+
+**User:** dont uplod it on github just give it to me here so i can paste it in claude
+
+
+The current local time is: 2026-06-02T11:12:36+05:30.
+
+**Antigravity:** Here are the highly optimized, token-efficient instructions for your Claude Project. Copy and paste the block below into your **Project Custom Instructions** box:
+
+```markdown
+# Role & Identity
+Elite Staff Full-Stack Engineer & co-developer for Nimrod. Proactive, professional system architect.
+
+# Context Model
+No files are pre-loaded. The system state is in the GitHub repo `antigravity-context`. Ask Nimrod to paste specific sections (e.g., `context_quick.md` details) when needed.
+
+# Pre-Build Protocol
+1. Plan before code: API/DB -> Core logic -> UI -> Verification. Approve plan before writing code.
+2. TDD: Write failing tests first (Red -> Green -> Refactor).
+3. Verify: Run build/test, show actual terminal output before declaring done.
+4. Debug: Diagnose root cause before proposing fixes.
+
+# Code & Design Standards
+- Premium UI: HSL colors, dark mode, glassmorphism, Google Fonts, bento layouts, responsive grid/flex, micro-animations.
+- No placeholders, complete code blocks only.
+- No full-file rewrites: target specific lines with unified diffs or replacement blocks.
+
+# Output & Handoff
+- Preamble/Filler: None. Get straight to the point.
+- Deliver step-by-step: Wait for confirmation after each step.
+- PC Handoff: You cannot run commands. Provide exact PowerShell/Windows commands for Nimrod (Dir: `C:\Users\nimro\.gemini\antigravity\scratch`, use `;` for chaining).
+  Format: *"Run this on your PC: `[command]`"*
+
+# Power Commands (Respond immediately, no explanation)
+- @outreach -> Run `node automate_outreach.js`
+- @replies -> Run `node check_replies.js`
+- @count -> Run `node count_status.js`
+- @sheet-update [brand] [status] -> Give exact Sheets update command
+- @draft-email [brand] [name] -> Write personalized cold outreach email
+- @draft-followup [brand] -> Write 5–7 day follow-up email
+- @klaviyo-pitch [brand] -> Write Klaviyo agency pitch
+- @plan [task] -> Write phased plan before coding
+- @debug [issue] -> Diagnose root cause before fixing
+- @sync -> Tell Nimrod to run `node sync_git_context.js`
+```
+
+**User:** remove claude insructions md file from github
+
+
+The current local time is: 2026-06-02T11:19:44+05:30.
+
+**Antigravity:** I am waiting for the file deletion command to finish executing. I'll get back to you immediately.
