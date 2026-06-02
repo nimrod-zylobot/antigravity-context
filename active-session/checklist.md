@@ -1,17 +1,6 @@
-- [x] Create spec document at docs/superpowers/specs/2026-06-02-enrich-lead-design.md
-- [x] Create implementation plan at docs/superpowers/plans/2026-06-02-enrich-lead.md
-- [x] Write implementation code for enrich_lead.js
-- [x] Upgrade verify_email.js with catch-all SMTP detection and mailbox check API
-- [x] Implement storefront email extraction and fallback logic if owner email is unverified
-- [x] Verify verification fallback and "Unverified" status
-- [x] Extract Store Name, Review App, Free Shipping, Instagram handle, and Niche
-- [x] Write to first empty row in Google Sheet
-- [x] Handle missing L and M sheet headers
-- [x] Format CLI output using colored ANSI codes
-- [x] Verify script execution on brillare.co.in and Jigar Patel
-- [x] Confirm Google Sheet update results
-- [x] Create/update walkthrough.md
-- [x] Revert storefront fallback email logic to fall back to owner name permutation (e.g. `vinay@soch.com`) and flag as "Unverified"
-- [x] Update automate_outreach.js to bypass verification failures for manual row targets (enabling user choice)
-- [x] Update Brillare (Row 81) on Google Sheet to use `jigar@brillare.co.in` and remove its override from `lead_details_override.json`
+- [x] Update automate_outreach.js to bypass verification failures for manual row targets (enabling user choice to send or skip)
+- [x] Update Row 81 for Brillare on the Google Sheet to use `jigar@brillare.co.in` and remove its override from `lead_details_override.json`
+- [x] Decommission and delete the enrich_lead.js script entirely from the workspace
+- [x] Remove enrich_lead.js documentation from automations_handbook.md in the repository
 - [x] Update sync_git_context.js to use the current conversation ID
+- [x] Run sync_git_context.js to commit and push changes to GitHub
