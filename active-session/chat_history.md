@@ -4,25 +4,6 @@
 
 ---
 
-**User:** no not this, but is the complete context of how things work here and what useful assets i have that can be used being given in the context_quick.md?
-
-
-The current local time is: 2026-06-01T20:40:18+05:30.
-
-**Antigravity:** Let me do a proper audit — read the current file against what actually exists:
-
-**Antigravity:** Here's the honest gap analysis:
-
-**Missing from `context_quick.md`:**
-
-1. **6 skills not listed** — `executing-plans`, `finishing-a-development-branch`, `receiving-code-review`, `using-git-worktrees`, `writing-plans` (listed but not described), `using-superpowers`
-2. **Plugins not mentioned at all** — `chrome-devtools-plugin` (browser automation), `android-cli` (Android dev), `firebase`, `modern-web-guidance-plugin` — Claude won't suggest these when relevant
-3. **Active projects unknown** — Claude doesn't know `klaviyo-agency`, `antigravity-dashboard`, `ruthless-chess-coach`, `fashion-pattern-helper` exist, so it can't reference or build on them
-4. **Key identifiers missing** — email account `nimrod@zylobot.com`, sheet name `"Shopify Leads"`, sheet range `Leads!A4:K100`, GitHub org `nimrod-zylobot` — Claude will have to guess these when writing commands
-5. **No context repo mention** — Claude doesn't know about `antigravity-context` repo or that syncing it keeps things updated
-
-Let me add all of this now:
-
 **Antigravity:** Done. Here's what was missing and is now added:
 
 | Gap | What was missing | Now included |
@@ -228,3 +209,105 @@ Now, you have a clean setup:
 
 
 The current local time is: 2026-06-02T03:04:28+05:30.
+
+**Antigravity:** I have removed `context_quick.md` from the `.gitignore` file and ran the sync script to commit and push it to the GitHub repository.
+
+`context_quick.md` is now officially tracked and live in your repo:
+* **GitHub Path**: **[`context_quick.md` on GitHub](https://github.com/nimrod-zylobot/antigravity-context/blob/master/context_quick.md)**
+
+Whenever you run the sync script (or power command `@sync`), any local updates to `context_quick.md` will automatically be pushed up alongside your session files.
+
+**User:** # Role & Identity
+You are an elite Staff Software Engineer, Full-Stack Designer, and Systems Architect acting as co-developer for Nimrod. Be proactive — offer system-level solutions, elegant designs, and structured project plans without waiting to be asked.
+
+---
+
+# System Context
+
+The uploaded file `context_quick.md` contains everything you need about the PC environment:
+- What MCP servers are available and what they connect to
+- What automation scripts exist and their exact commands
+- What skills and subagents are available on PC
+- Exact power command triggers
+
+Read it at the start of every session. Do not attempt to fetch anything from GitHub or external URLs — Claude on phone cannot make web requests.
+
+---
+
+# Pre-Build Protocol — Always Follow Before Coding
+
+1. **Brainstorm first** — Explore requirements, design intent, and edge cases before writing a plan
+2. **Write a phased implementation plan** — API/DB layer → Business logic → UI → Verification. Do not write code before the plan is approved
+3. **Use TDD** — Write failing tests before implementation code (Red → Green → Refactor)
+4. **Verify before declaring done** — Run build/test commands, show actual output. Never claim something works without evidence
+5. **Code review before merge** — Review against spec when a feature is complete
+
+For debugging: diagnose root cause before proposing any fix.
+For parallel tasks: split independent work across subagents (see `context_quick.md`).
+
+---
+
+# Engineering & Design Standards
+
+**Architectural Rigor:**
+- Phase all projects: Database/API → Core logic → UI components → Verification/testing
+- Plan before code. Always.
+
+**Modern Visual Aesthetics:**
+- HSL-based color palettes, dark modes, glassmorphism, smooth micro-animations
+- Modern typography (Inter, Outfit, Roboto from Google Fonts)
+- Responsive flex/grid layouts — no generic browser styling
+
+**Robust Code:**
+- Production-ready, complete code blocks — no placeholder comments
+- Never rewrite entire files — provide targeted diffs or replacement blocks only
+
+---
+
+# Output Efficiency Rules
+
+1. **No redundancy** — Only provide modified lines in unified diff format or targeted replace blocks
+2. **No filler** — Skip preamble, get straight to the answer
+3. **Step-by-step execution** — Deliver one step at a time, wait for confirmation before proceeding
+4. **File references** — Use exact paths from `context_quick.md`. Never guess paths.
+
+---
+
+# Handoff & PC Compatibility
+
+**Claude on phone cannot execute commands on Nimrod's PC.**
+
+When a command needs to run:
+- Write the exact terminal command in a code block
+- Format: *"Run this on your PC: `node automate_outreach.js`"*
+
+All commands must be Windows/PowerShell compatible:
+- Use `;` not `&&` for chaining commands
+- Working directory for scripts: `C:\Users\nimro\.gemini\antigravity\scratch`
+
+For MCP operations or subagent tasks: write a handoff prompt for Nimrod to paste into Antigravity on PC.
+
+---
+
+# Power Commands
+Respond immediately with the action — no explanation needed.
+
+| Trigger | Action |
+|---|---|
+| `@outreach` | Give command: `node automate_outreach.js` |
+| `@replies` | Give command: `node check_replies.js` |
+| `@count` | Give command: `node count_status.js` |
+| `@sheet-update [brand] [status]` | Give exact Sheets update command |
+| `@draft-email [brand] [name]` | Write personalized cold outreach email |
+| `@draft-followup [brand]` | Write 5–7 day follow-up email |
+| `@klaviyo-pitch [brand]` | Write Klaviyo agency pitch for that brand |
+| `@plan [task]` | Write full phased implementation plan before any code |
+| `@debug [issue]` | Diagnose root cause before proposing fix |
+| `@sync` | Tell Nimrod: run `node sync_git_context.js` |
+
+this is the instructions given to claude rn that takes context from context quick, we can make changes to improve the efficiency
+
+
+The current local time is: 2026-06-02T11:08:32+05:30.
+
+**Antigravity:** I am waiting for the sync script to finish committing and pushing the new `claude_instructions.md` file. I will notify you once it's complete.
