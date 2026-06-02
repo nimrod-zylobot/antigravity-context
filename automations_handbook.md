@@ -70,3 +70,37 @@ This document is the functional guide for the automation scripts running in Nimr
 * **What it updates:** `checklist.md`, `walkthrough.md`, `chat_history.md`, `projects_inventory.md`.
 * **What it never touches:** All hand-crafted docs (`README.md`, `master_workspace_profile.md`, `agents_handbook.md`, `automations_handbook.md`, `power_commands.md`, `pc_path_map.md`, `mcp_servers.md`, `installed_plugins.md`, `skills_reference.md`).
 * **Trigger:** `node sync_git_context.js`
+
+---
+
+## 7. Follow-up Automation (`followup_automation.js`)
+
+* **What it does:** Scans all Shopify leads with status `Contacted` and automatically sends scheduled follow-up emails via Gmail based on days elapsed since the last contact event. Writes follow-up dates and notes back to the Google Sheet after each send.
+* **How it works:**
+  1. Resolves OAuth token for `nimrod@zylobot.com` using the same credential file as the outreach engine.
+  2. Fetches all rows from `Leads!A1:K100` in the Shopify Leads tracker spreadsheet.
+  3. For each lead with status `Contacted`:
+     - **Follow-up 1** — if `Follow-up 1` (Col G) is empty AND `Date Contacted` (Col F) was ≥ 2 days ago → sends Follow-up 1 email and writes today's date to Col G.
+     - **Follow-up 2** — if `Follow-up 2` (Col H) is empty AND `Follow-up 1` (Col G) date was ≥ 3 days ago → sends Follow-up 2 email and writes today's date to Col H.
+  4. Skips any lead where status is `Replied`.
+  5. Resolves contacts from `lead_details_override.json` first (same as `automate_outreach.js`), falling back to the raw email in Col E.
+  6. Verifies each email via MX record lookup (DNS-over-HTTPS) before sending.
+  7. Addresses recipients by first name only. Falls back to `[Store Name] Team` for generic/team email addresses.
+* **Email Templates:**
+  - *Follow-up 1 Subject:* `Re: lost checkouts at [Store Name]?`
+    > Hi [First Name], Just bumping this to see if you had a moment to read my note about Klaviyo checkout recovery for [Store Name]? We build performance-based flows that typically recover an extra 15-20% of abandoned carts. Worth a brief call?
+  - *Follow-up 2 Subject:* `Re: lost checkouts at [Store Name]?`
+    > Hi [First Name], I know you are busy running [Store Name]. One last quick question: is optimizing checkout recovery a focus for you this quarter, or should I check back later?
+* **Sheet Columns Used:**
+  | Column | Field | Action |
+  |--------|-------|--------|
+  | F | Date Contacted | Read — determines eligibility for Follow-up 1 |
+  | G | Follow-up 1 | Read (empty = not yet sent); Write (today's date after send) |
+  | H | Follow-up 2 | Read (empty = not yet sent); Write (today's date after send) |
+  | J | Status | Read — must be `Contacted`; skips `Replied` |
+  | K | Notes | Append — logs which follow-up was sent to which email |
+* **When it is useful:** Run daily (or when prompted) to keep outreach threads active and warm leads engaged without manual effort.
+* **Triggers:**
+  - Dry-run (no emails sent, no sheet updates): `node followup_automation.js`
+  - Execute (sends emails + updates sheet): `node followup_automation.js --send`
+  - With mock date for testing: `node followup_automation.js --date=2026-06-05 --send`
