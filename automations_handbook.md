@@ -104,7 +104,7 @@ This document is the functional guide for the automation scripts running in Nimr
      - **Storefront Emails**: Collects direct emails (like `info@` or `customercare@`) published on the homepage.
   2. Generates standard owner email permutations (`first@domain`, `first.last@domain`, etc.).
   3. Verifies email permutations sequentially using SMTP validation checks via the `verify_email.js` upgrade. If the domain is a catch-all (accept-all), the script flags the lead status and email status as `Unverified` to protect the sender's reputation.
-  4. If owner email permutations cannot be verified, it automatically falls back to testing and using the first email address scraped directly from the storefront HTML.
+  4. If owner email permutations cannot be verified, it falls back to using the first generated owner email permutation (e.g. first@domain) and flags the lead as Unverified in the sheet. Scraped storefront emails are written to the Notes column for your manual reference.
   5. Appends the lead row (A-M) to the first empty row of the Google Sheet, leaving `Date Contacted` empty to be updated only when outreach occurs.
 * **When it is useful:** Ingesting new leads into the outreach pipeline with minimal manual scraping and verification effort.
 * **Trigger:**
